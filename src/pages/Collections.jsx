@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProductCard from "../components/ProductCard";
-import { ALL_PERFUMES } from "../data/perfumes.js"; 
+import { ALL_PERFUMES } from "../data/perfumes.js"; // make sure path and casing are correct
 
 const Collections = () => {
   const [filter, setFilter] = useState("All");
@@ -25,12 +25,9 @@ const Collections = () => {
       className="min-h-screen bg-white pt-12 pb-20"
     >
       <div className="max-w-7xl mx-auto px-6">
-
         {/* Page Header */}
         <div className="text-center mb-10">
-          <h1 className="text-5xl font-serif mb-3 italic">
-            The Library
-          </h1>
+          <h1 className="text-5xl font-serif mb-3 italic">The Library</h1>
           <p className="text-neutral-500 uppercase tracking-[0.4em] text-[10px] font-bold">
             Explore Our Full Range
           </p>
@@ -53,7 +50,6 @@ const Collections = () => {
               >
                 {cat.name === "All" ? cat.name : `For ${cat.name}`}
               </span>
-
               <span className="text-[9px] text-neutral-300 mt-1">
                 {cat.count} Scent(s)
               </span>
@@ -62,11 +58,7 @@ const Collections = () => {
                 <motion.div
                   layoutId="activeFilter"
                   className="absolute -bottom-[25px] w-1 h-1 bg-red-700 rounded-full"
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 30,
-                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}
             </button>
@@ -98,12 +90,10 @@ const Collections = () => {
         {/* Pagination */}
         <div className="mt-24 flex flex-col items-center">
           <div className="h-[1px] w-16 bg-neutral-100 mb-8"></div>
-
           <div className="flex items-center space-x-6">
             <span className="text-[10px] uppercase tracking-widest text-neutral-400 cursor-pointer hover:text-black transition-colors">
               Prev
             </span>
-
             <div className="flex items-center space-x-2">
               {[1, 2, 3, "...", 9].map((num, i) => (
                 <button
@@ -118,13 +108,11 @@ const Collections = () => {
                 </button>
               ))}
             </div>
-
             <span className="text-[10px] uppercase tracking-widest text-neutral-400 cursor-pointer hover:text-black transition-colors">
               Next
             </span>
           </div>
         </div>
-
       </div>
     </motion.div>
   );
