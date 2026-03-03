@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import loginImg from '../assets/perfume.png'; // Use your existing luxury image
+import loginImg from '../assets/perfume.png'; 
 
 const Login = () => {
   return (

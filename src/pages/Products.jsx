@@ -25,7 +25,7 @@ const Products = () => {
 
   const categories = ["All", "Woody", "Floral", "Spicy", "Fresh"];
 
-  // Multi-layered filtering: Category + Search Term
+  // Multi-layered
   const filteredProducts = allProducts.filter(product => {
     const matchesCategory = filter === 'All' || product.category === filter;
     const matchesSearch = searchTerm === "" || 

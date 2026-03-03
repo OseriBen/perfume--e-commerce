@@ -13,7 +13,9 @@ import Collections from './pages/Collections';
 import ProductDetail from './pages/ProductDetail';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
-// Helper to reset scroll position on page change
+
+
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -28,11 +30,11 @@ function App() {
       {/* Resets scroll so user starts at the top of ProductDetail */}
       <ScrollToTop />
       
-      {/* Global Navigation - Now connected to CartContext */}
+      {/* Global Navigation - */}
       <Navbar />
 
       <Routes>
-        {/* LANDING PAGE ROUTE */}
+        
         <Route 
           path="/" 
           element={

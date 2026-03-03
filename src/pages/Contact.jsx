@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
     setIsSending(true);
 
-    // Replace these with your actual EmailJS IDs when ready
+    
     emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
       .then(() => {
           setIsSuccess(true);

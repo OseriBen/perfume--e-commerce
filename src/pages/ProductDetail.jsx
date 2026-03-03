@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiChevronLeft, FiPlus, FiMinus, FiShoppingBag, FiCheck } from 'react-icons/fi';
 import { useCart } from '../context/CartContext';
-import { ALL_PERFUMES } from '../data/perfumes.js'; // ✅ Import your perfumes dataset
+import { ALL_PERFUMES } from '../data/perfumes.js'; 
 
 const ProductDetail = () => {
   const { id } = useParams();
