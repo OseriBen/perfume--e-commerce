@@ -2,17 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProductCard from "../components/ProductCard";
 
-/*
-  AUTO IMPORT ALL PERFUME IMAGES
-  Make sure your images are inside:
-  src/assets/
 
-  And named:
-  perfume1.jpg
-  perfume2.jpg
-  ...
-  perfume20.jpg
-*/
 
 const perfumeImages = Object.values(
   import.meta.glob("../assets/perfume*.jpg", { eager: true })
