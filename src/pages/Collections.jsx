@@ -1,23 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProductCard from "../components/ProductCard";
-
-
-
-const perfumeImages = Object.values(
-  import.meta.glob("../assets/perfume*.jpg", { eager: true })
-).map((module) => module.default);
-
-// Data for 20 Perfumes
-const ALL_PERFUMES = Array.from({ length: 20 }, (_, i) => ({
-  id: i + 1,
-  name: `Somori Fragrance №${i + 1}`,
-  volume: "EDP 100ml",
-  price: 120 + i * 5,
-  category:
-    i % 3 === 0 ? "Men" : i % 3 === 1 ? "Women" : "Unisex",
-  image: perfumeImages[i],
-}));
+import { ALL_PERFUMES } from "../data/perfumes.js"; // ✅ Central dataset
 
 const Collections = () => {
   const [filter, setFilter] = useState("All");
@@ -32,15 +16,13 @@ const Collections = () => {
   const filteredProducts =
     filter === "All"
       ? ALL_PERFUMES
-      : ALL_PERFUMES.filter(
-          (p) => p.category === filter
-        );
+      : ALL_PERFUMES.filter((p) => p.category === filter);
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen bg-white pt-24 pb-20"
+      className="min-h-screen bg-white pt-12 pb-20"
     >
       <div className="max-w-7xl mx-auto px-6">
 
@@ -69,9 +51,7 @@ const Collections = () => {
                     : "text-neutral-400 group-hover:text-black"
                 }`}
               >
-                {cat.name === "All"
-                  ? cat.name
-                  : `For ${cat.name}`}
+                {cat.name === "All" ? cat.name : `For ${cat.name}`}
               </span>
 
               <span className="text-[9px] text-neutral-300 mt-1">
