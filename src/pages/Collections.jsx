@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProductCard from "../components/ProductCard";
-import { ALL_PERFUMES } from "../Data/perfumes.js"; 
+import { ALL_PERFUMES } from "../data/perfumes.js"; 
 
 const Collections = () => {
   const [filter, setFilter] = useState("All");
